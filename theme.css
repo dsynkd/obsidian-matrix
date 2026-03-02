@@ -834,6 +834,11 @@ button:active,
   box-shadow: var(--shadow-1);
 }
 
+.tooltip.mod-error {
+  background: var(--background-secondary-alt);
+  color: var(--text-error);
+}
+
 .search-result-container {
   background: var(--background-secondary);
 }
