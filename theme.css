@@ -1066,11 +1066,11 @@ progress::-webkit-progress-value {
 
 @keyframes matrix-rain-fall {
   0% {
-    transform: translateY(-50%);
+    transform: translateY(0);
   }
 
   100% {
-    transform: translateY(50%);
+    transform: translateY(300px);
   }
 }
 
