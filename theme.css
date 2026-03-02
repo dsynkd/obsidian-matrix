@@ -22,6 +22,12 @@ settings:
     type: class-toggle
     default: true
     class: monospace-font
+  -
+    title: Hide Files View Indentation Guide
+    id: hide-nav-indentation-guide
+    type: class-toggle
+    default: true
+    class: hide-nav-indentation-guide
 */
 
 
@@ -38,10 +44,16 @@ settings:
 body.sharp-corners {
   --radius-s: 0;
   --radius-m: 0;
+  --metadata-property-radius-hover: 0;
 }
 
 body.monospace-font {
-  font-family: monospace;
+  --font-interface: monospace;
+  --file-header-font: monospace;
+}
+
+body.hide-nav-indentation-guide {
+  --nav-indentation-guide-width: 0;
 }
 
 .theme-dark {
@@ -431,7 +443,10 @@ button:active, .clickable-icon:active, .mod-cta:active { transform: translateY(1
 .side-dock-ribbon-action:hover { color: var(--text-accent); background: var(--background-modifier-hover); border-radius: var(--radius-s); }
 
 .nav-header,
-.nav-files-container { background: var(--background-secondary); }
+.nav-files-container {
+  background: var(--background-secondary);
+  border: var(--border-width) solid var(--tab-outline-color);
+}
 .nav-file-title,
 .nav-folder-title { color: var(--text-normal); border-radius: var(--radius-s); padding: 6px 8px; }
 .nav-file-title:hover,
@@ -439,27 +454,32 @@ button:active, .clickable-icon:active, .mod-cta:active { transform: translateY(1
 .nav-file-title.is-active,
 .nav-folder-title.is-active { background: var(--background-modifier-active); color: var(--text-accent); box-shadow: inset 0 0 0 1px var(--interactive-accent); }
 
-.mod-left-split .workspace-tab-header,
-.mod-right-split .workspace-tab-header,
-.mod-left-split .workspace-tab-header-new-tab,
-.mod-right-split .workspace-tab-header-new-tab {
-  color: var(--text-muted);
+.workspace-tab-header {
   border: var(--border-w) solid var(--color-border);
+  border-radius: var(--radius-s) !important;
+  padding: 0 !important;
 }
-.mod-left-split .workspace-tab-header:hover,
-.mod-left-split .workspace-tab-header-new-tab:hover,
-.mod-right-split .workspace-tab-header:hover,
-.mod-right-split .workspace-tab-header-new-tab:hover {
+.workspace-tab-header:hover {
   color: var(--text-accent); background: var(--background-modifier-hover); border-radius: var(--radius-s);
   background: var(--background-modifier-hover);
   border-color: var(--interactive-accent);
 }
-.mod-left-split .workspace-tab-header.is-active,
-.mod-right-split .workspace-tab-header.is-active {
+.workspace-tab-header.is-active {
   color: var(--text-accent);
   background: var(--background-modifier-active);
   border-radius: var(--radius-s);
   border-color: var(--interactive-accent);
+}
+
+.mod-root .workspace-tab-header-container-inner {
+  gap: var(--size-2-3);
+  margin-bottom: 4px;
+  margin-top: 5px;
+}
+
+.workspace-split.mod-root .workspace-tab-header-container .workspace-tab-header.is-active::before,
+.workspace-split.mod-root .workspace-tab-header-container .workspace-tab-header.is-active::after {
+  box-shadow: none;
 }
 
 .view-header { background: var(--background-secondary); border-bottom: 1px solid var(--background-modifier-border); }
@@ -494,6 +514,10 @@ button:active, .clickable-icon:active, .mod-cta:active { transform: translateY(1
 .metadata-property-key { color: var(--text-accent); font-weight: 600; }
 .metadata-add-button { background: var(--interactive-normal); border: var(--border-w) solid var(--color-border); }
 .metadata-add-button:hover { background: var(--interactive-hover); border-color: var(--interactive-accent); }
+.metadata-property:hover {
+  box-shadow: none;
+  border: var(--border-w) solid var(--color-border);
+}
 
 .internal-embed,
 .image-embed,
