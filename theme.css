@@ -10,6 +10,18 @@ settings:
     type: class-toggle
     default: false
     class: matrix-rain-on
+  -
+    title: Sharp Corners
+    id: sharp-corners
+    type: class-toggle
+    default: true
+    class: sharp-corners
+  -
+    title: Monospace Font
+    id: monospace-font
+    type: class-toggle
+    default: true
+    class: monospace-font
 */
 
 
@@ -21,6 +33,15 @@ settings:
   --fast: 120ms;
   --med: 180ms;
   --slow: 260ms;
+}
+
+body.sharp-corners {
+  --radius-s: 0;
+  --radius-m: 0;
+}
+
+body.monospace-font {
+  font-family: monospace;
 }
 
 .theme-dark {
@@ -548,4 +569,15 @@ progress::-webkit-progress-value { background: var(--interactive-accent); border
   --text-muted: #a6ffe8;
   --color-border: #00bf66;
   --background-modifier-hover: #124e34;
+}
+
+.view-header-nav-buttons,
+.workspace-drawer-vault-actions,
+.view-actions,
+.nav-buttons-container {
+  gap: var(--size-2-3);
+}
+
+.workspace-tab-header-new-tab {
+  margin-inline-end: var(--size-2-3);
 }
