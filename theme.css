@@ -34,6 +34,12 @@ settings:
     type: class-toggle
     default: true
     class: header-glow
+  -
+    title: Header Underlines
+    id: header-underlines
+    type: class-toggle
+    default: true
+    class: header-underlines
 */
 
 
@@ -210,9 +216,6 @@ body.hide-nav-indentation-guide {
 
 .markdown-rendered h1,
 .inline-title {
-  border-bottom: var(--border-w) solid var(--color-border-strong);
-  padding-bottom: .25em;
-  margin-bottom: .8em;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-weight: 800;
@@ -235,6 +238,13 @@ body.header-glow .inline-title {
 }
 body.header-glow .markdown-rendered h2 { color: var(--glow-2); }
 body.header-glow .markdown-rendered h3 { color: var(--glow-1); }
+
+body.header-underlines .markdown-rendered h1,
+body.header-underlines .inline-title {
+  border-bottom: var(--border-w) solid var(--color-border-strong);
+  padding-bottom: .25em;
+  margin-bottom: .8em;
+}
 
 .markdown-rendered p,
 .cm-s-obsidian .cm-line { line-height: 1.7; }
@@ -262,7 +272,7 @@ body.header-glow .markdown-source-view.mod-cm6 .cm-header-1 {
 body.header-glow .markdown-source-view.mod-cm6 .cm-header-2 { color: var(--glow-2); }
 body.header-glow .markdown-source-view.mod-cm6 .cm-header-3 { color: var(--glow-1); }
 .markdown-source-view.mod-cm6 .cm-formatting-header { color: color-mix(in oklab, var(--text-accent) 55%, var(--text-faint)); }
-.markdown-source-view.mod-cm6 .cm-line:has(.cm-header-1) { border-bottom: var(--border-w) solid var(--color-border-strong); padding-bottom: .25em; margin-bottom: .8em; }
+body.header-underlines .markdown-source-view.mod-cm6 .cm-line:has(.cm-header-1) { border-bottom: var(--border-w) solid var(--color-border-strong); padding-bottom: .25em; margin-bottom: .8em; }
 
 a,
 .internal-link,
