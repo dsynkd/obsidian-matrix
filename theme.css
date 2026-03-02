@@ -298,10 +298,19 @@ body.header-glow .markdown-rendered h3 {
 }
 
 body.header-underlines .markdown-rendered h1,
-body.header-underlines .inline-title {
+body.header-underlines .inline-title, 
+body.header-underlines .markdown-source-view.is-live-preview.mod-cm6 .cm-line:has(.cm-header-1) {
   border-bottom: var(--border-w) solid var(--color-border);
+  margin-bottom: 0;
+}
+
+body.header-underlines .inline-title {
   padding-bottom: .25em;
-  margin-bottom: .8em;
+}
+
+body.header-underlines .markdown-rendered h1,
+body.header-underlines .markdown-source-view.is-live-preview.mod-cm6 .cm-line:has(.cm-header-1) {
+  padding-bottom: 0;
 }
 
 .markdown-rendered p,
@@ -1080,4 +1089,22 @@ progress::-webkit-progress-value {
 
 .workspace-tab-header-new-tab {
   margin-inline-end: var(--size-2-3);
+}
+
+.markdown-source-view .metadata-container, .markdown-preview-view .metadata-container {
+  transform: none;
+  padding: 10px;
+}
+
+.bases-embed {
+  border: var(--border-width) solid var(--color-border-strong);
+}
+
+.bases-toolbar .bases-toolbar-item:not(.bases-toolbar-results-menu) {
+  border: var(--border-width) solid var(--color-border);
+  margin: 0;
+}
+
+.bases-toolbar {
+  gap: var(--size-2-3);
 }
