@@ -47,6 +47,12 @@ settings:
     type: class-toggle
     default: true
     class: header-underlines
+  -
+    title: Compact Add Property Button
+    id: compact-add-property-button
+    type: class-toggle
+    default: true
+    class: compact-add-property-button
 */
 
 
@@ -63,7 +69,10 @@ settings:
 body.sharp-corners {
   --radius-s: 0;
   --radius-m: 0;
+  --radius-l: 0;
   --metadata-property-radius-hover: 0;
+  --button-radius: 0;
+  --metadata-property-radius-focus: 0;
 }
 
 body.monospace-font {
@@ -80,6 +89,21 @@ body.monospace-font {
 
 body.hide-nav-indentation-guide {
   --nav-indentation-guide-width: 0;
+}
+
+body.compact-add-property-button {
+  & div.metadata-add-button {
+    position: absolute;
+  }
+
+  & .markdown-source-view div.metadata-add-button {
+    right: 6px;
+    top: 0;
+  }
+
+  & div.metadata-add-button span.text-button-label {
+    display: none;
+  }
 }
 
 .theme-dark {
@@ -301,7 +325,7 @@ body.header-underlines .markdown-rendered h1,
 body.header-underlines .inline-title, 
 body.header-underlines .markdown-source-view.is-live-preview.mod-cm6 .cm-line:has(.cm-header-1) {
   border-bottom: var(--border-w) solid var(--color-border);
-  margin-bottom: 0;
+  margin-bottom: .5em;
 }
 
 body.header-underlines .inline-title {
@@ -706,6 +730,7 @@ button:active,
   border: var(--border-w) solid var(--color-border);
   border-radius: var(--radius-s) !important;
   padding: 0 !important;
+  transition: border-color var(--fast);
 }
 
 .workspace-tab-header:hover {
@@ -829,6 +854,14 @@ button:active,
   color: var(--text-accent);
 }
 
+.tree-item-self {
+  transition: box-shadow var(--fast);
+}
+
+body:not(.is-grabbing) .tree-item-self.is-clickable:hover {
+  box-shadow: 0 0 0 var(--border-w) var(--color-border-strong);
+}
+
 .metadata-container {
   background: var(--background-secondary);
   border: var(--border-w) solid var(--background-modifier-border);
@@ -838,6 +871,7 @@ button:active,
 
 .metadata-property {
   border-bottom: 1px dashed var(--background-modifier-border);
+  transition: box-shadow var(--fast);
 }
 
 .metadata-property-key {
@@ -848,6 +882,7 @@ button:active,
 .metadata-add-button {
   background: var(--interactive-normal);
   border: var(--border-w) solid var(--color-border);
+  transition: border-color var(--fast);
 }
 
 .metadata-add-button:hover {
@@ -855,9 +890,14 @@ button:active,
   border-color: var(--interactive-accent);
 }
 
-.metadata-property:hover {
-  box-shadow: none;
-  outline: var(--border-w) solid var(--color-border);
+.metadata-property:hover,
+.metadata-property:focus-within {
+  box-shadow: 0 0 0 var(--border-w) var(--color-border) !important;
+  z-index: 2;
+}
+
+.metadata-properties-heading .collapse-indicator {
+  inset-inline-start: -13px;
 }
 
 .internal-embed,
@@ -1096,19 +1136,41 @@ progress::-webkit-progress-value {
   padding: 10px;
 }
 
-.metadata-properties-heading .collapse-indicator {
-  inset-inline-start: -13px;
-}
+/* MARK: Bases */
 
 .bases-embed {
-  border: var(--border-width) solid var(--color-border-strong);
+  border: var(--border-width) solid var(--color-border);
+}
+
+.bases-toolbar {
+  gap: var(--size-2-3);
 }
 
 .bases-toolbar .bases-toolbar-item:not(.bases-toolbar-results-menu) {
   border: var(--border-width) solid var(--color-border);
   margin: 0;
+  transition: border-color var(--fast);
 }
 
-.bases-toolbar {
-  gap: var(--size-2-3);
+.bases-toolbar .bases-toolbar-item:not(.bases-toolbar-results-menu):hover {
+  border: var(--border-width) solid var(--color-border-strong);
+}
+
+.bases-cards-item {
+  transition: box-shadow var(--fast);
+}
+
+.bases-cards-item:hover {
+  box-shadow: 0 0 0 var(--border-width) var(--color-border-strong);
+}
+
+/* MARK: Calendar Plugin */
+
+table.calendar div.day {
+  border-radius: var(--radius-s);
+  transition: box-shadow var(--fast);
+}
+
+table.calendar div.day:hover {
+  box-shadow: 0 0 0 var(--border-width) var(--color-border-strong);
 }
