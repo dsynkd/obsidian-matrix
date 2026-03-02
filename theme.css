@@ -63,6 +63,12 @@ settings:
     type: class-toggle
     default: true
     class: compact-add-property-button
+  -
+    title: Enable Transition Animations
+    id: transition-animations-on
+    type: class-toggle
+    default: true
+    class: transition-animations-on
 */
 
 
@@ -75,6 +81,57 @@ settings:
   --med: 180ms;
   --slow: 260ms;
   --matrix-rain-duration: 18s;
+}
+
+body.transition-animations-on {
+  & a,
+  & .internal-link,
+  & .external-link,
+  & .cm-s-obsidian span.cm-link {
+    transition: color var(--fast), text-shadow var(--fast), background var(--fast);
+  }
+
+  & input[type="search"],
+  & input[type="number"],
+  & input[type="email"],
+  & textarea,
+  & select {
+    transition: border-color var(--fast), box-shadow var(--fast), background var(--fast);
+  }
+
+  & button,
+  & .clickable-icon,
+  & .mod-cta {
+    transition: background var(--fast), border-color var(--fast), transform var(--fast);
+  }
+
+  & .workspace-tab-header {
+    transition: border-color var(--fast);
+  }
+
+  & .tree-item-self {
+    transition: box-shadow var(--fast);
+  }
+
+  & .metadata-property {
+    transition: box-shadow var(--fast);
+  }
+
+  & .metadata-add-button {
+    transition: border-color var(--fast);
+  }
+
+  & .bases-toolbar .bases-toolbar-item:not(.bases-toolbar-results-menu) {
+    transition: border-color var(--fast);
+  }
+
+  & .bases-cards-item {
+    transition: box-shadow var(--fast);
+  }
+
+  & table.calendar div.day {
+    transition: box-shadow var(--fast);
+  }
 }
 
 body.sharp-corners {
@@ -393,7 +450,6 @@ a,
   color: var(--text-accent);
   text-decoration: underline;
   text-underline-offset: 2px;
-  transition: color var(--fast), text-shadow var(--fast), background var(--fast);
 }
 
 a:hover,
@@ -656,7 +712,6 @@ select {
   color: var(--text-normal);
   border-radius: var(--radius-s);
   border: none;
-  transition: border-color var(--fast), box-shadow var(--fast), background var(--fast);
   box-shadow: none;
 }
 
@@ -675,7 +730,6 @@ button,
   color: var(--text-normal);
   border: var(--border-w) solid var(--color-border);
   border-radius: var(--radius-s);
-  transition: background var(--fast), border-color var(--fast), transform var(--fast);
 }
 
 button:hover,
@@ -741,7 +795,6 @@ button:active,
   border: var(--border-w) solid var(--color-border);
   border-radius: var(--radius-s) !important;
   padding: 0 !important;
-  transition: border-color var(--fast);
 }
 
 .workspace-tab-header:hover {
@@ -870,10 +923,6 @@ button:active,
   color: var(--text-accent);
 }
 
-.tree-item-self {
-  transition: box-shadow var(--fast);
-}
-
 body:not(.is-grabbing) .tree-item-self.is-clickable:hover {
   box-shadow: 0 0 0 var(--border-w) var(--color-border-strong);
 }
@@ -887,7 +936,6 @@ body:not(.is-grabbing) .tree-item-self.is-clickable:hover {
 
 .metadata-property {
   border-bottom: 1px dashed var(--background-modifier-border);
-  transition: box-shadow var(--fast);
 }
 
 .metadata-property-key {
@@ -898,7 +946,6 @@ body:not(.is-grabbing) .tree-item-self.is-clickable:hover {
 .metadata-add-button {
   background: var(--interactive-normal);
   border: var(--border-w) solid var(--color-border);
-  transition: border-color var(--fast);
 }
 
 .metadata-add-button:hover {
@@ -1165,15 +1212,10 @@ progress::-webkit-progress-value {
 .bases-toolbar .bases-toolbar-item:not(.bases-toolbar-results-menu) {
   border: var(--border-width) solid var(--color-border);
   margin: 0;
-  transition: border-color var(--fast);
 }
 
 .bases-toolbar .bases-toolbar-item:not(.bases-toolbar-results-menu):hover {
   border: var(--border-width) solid var(--color-border-strong);
-}
-
-.bases-cards-item {
-  transition: box-shadow var(--fast);
 }
 
 .bases-cards-item:hover {
@@ -1184,7 +1226,6 @@ progress::-webkit-progress-value {
 
 table.calendar div.day {
   border-radius: var(--radius-s);
-  transition: box-shadow var(--fast);
 }
 
 table.calendar div.day:hover {
