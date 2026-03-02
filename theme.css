@@ -619,10 +619,10 @@ textarea,
 select {
   background: var(--background-modifier-form-field);
   color: var(--text-normal);
-  border: var(--border-w) solid var(--color-border);
   border-radius: var(--radius-s);
+  border: none;
   transition: border-color var(--fast), box-shadow var(--fast), background var(--fast);
-  box-shadow: var(--shadow-1);
+  box-shadow: none;
 }
 
 input:focus,
@@ -1094,6 +1094,10 @@ progress::-webkit-progress-value {
 .markdown-source-view .metadata-container, .markdown-preview-view .metadata-container {
   transform: none;
   padding: 10px;
+}
+
+.metadata-properties-heading .collapse-indicator {
+  inset-inline-start: -13px;
 }
 
 .bases-embed {
