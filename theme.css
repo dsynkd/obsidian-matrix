@@ -439,9 +439,28 @@ button:active, .clickable-icon:active, .mod-cta:active { transform: translateY(1
 .nav-file-title.is-active,
 .nav-folder-title.is-active { background: var(--background-modifier-active); color: var(--text-accent); box-shadow: inset 0 0 0 1px var(--interactive-accent); }
 
-.workspace-tab-header { background: var(--background-secondary); border-right: 1px solid var(--background-modifier-border); color: var(--text-faint); }
-.workspace-tab-header.is-active { background: var(--background-secondary-alt); color: var(--text-accent); box-shadow: inset 0 -2px 0 var(--interactive-accent); }
-.workspace-tab-header:hover { color: var(--text-accent); background: var(--background-modifier-hover); }
+.mod-left-split .workspace-tab-header,
+.mod-right-split .workspace-tab-header,
+.mod-left-split .workspace-tab-header-new-tab,
+.mod-right-split .workspace-tab-header-new-tab {
+  color: var(--text-muted);
+  border: var(--border-w) solid var(--color-border);
+}
+.mod-left-split .workspace-tab-header:hover,
+.mod-left-split .workspace-tab-header-new-tab:hover,
+.mod-right-split .workspace-tab-header:hover,
+.mod-right-split .workspace-tab-header-new-tab:hover {
+  color: var(--text-accent); background: var(--background-modifier-hover); border-radius: var(--radius-s);
+  background: var(--background-modifier-hover);
+  border-color: var(--interactive-accent);
+}
+.mod-left-split .workspace-tab-header.is-active,
+.mod-right-split .workspace-tab-header.is-active {
+  color: var(--text-accent);
+  background: var(--background-modifier-active);
+  border-radius: var(--radius-s);
+  border-color: var(--interactive-accent);
+}
 
 .view-header { background: var(--background-secondary); border-bottom: 1px solid var(--background-modifier-border); }
 .view-header-title { color: var(--text-accent); letter-spacing: 0.04em; }
@@ -576,6 +595,11 @@ progress::-webkit-progress-value { background: var(--interactive-accent); border
 .view-actions,
 .nav-buttons-container {
   gap: var(--size-2-3);
+}
+
+.mod-left-split .workspace-tab-header-container .workspace-tab-header-container-inner,
+.mod-right-split .workspace-tab-header-container .workspace-tab-header-container-inner {
+  gap: var(--size-2-3) !important;
 }
 
 .workspace-tab-header-new-tab {
