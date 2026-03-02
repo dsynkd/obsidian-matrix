@@ -18,6 +18,16 @@ settings:
     default: false
     class: matrix-rain-on
   -
+    title: Rain Speed (seconds)
+    id: matrix-rain-duration
+    description: Animation duration in seconds
+    type: variable-number-slider
+    default: 18
+    min: 1
+    max: 60
+    step: 1
+    format: s
+  -
     title: Sharp Corners
     id: sharp-corners
     type: class-toggle
@@ -64,6 +74,7 @@ settings:
   --fast: 120ms;
   --med: 180ms;
   --slow: 260ms;
+  --matrix-rain-duration: 18s;
 }
 
 body.sharp-corners {
@@ -1059,7 +1070,7 @@ progress::-webkit-progress-value {
   inset: -100% -10% -100% -10%;
   pointer-events: none;
   background: repeating-linear-gradient(0deg, transparent, transparent 12px, color-mix(in oklab, var(--glow-1) 18%, transparent) 13px, color-mix(in oklab, var(--glow-2) 22%, transparent) 15px);
-  animation: matrix-rain-fall 18s linear infinite;
+  animation: matrix-rain-fall var(--matrix-rain-duration) linear infinite;
   opacity: 0.7;
   z-index: 1;
 }
