@@ -28,6 +28,12 @@ settings:
     type: class-toggle
     default: true
     class: hide-nav-indentation-guide
+  -
+    title: Header Glow
+    id: header-glow
+    type: class-toggle
+    default: true
+    class: header-glow
 */
 
 
@@ -50,6 +56,13 @@ body.sharp-corners {
 body.monospace-font {
   --font-interface: monospace;
   --file-header-font: monospace;
+  --h1-font: monospace;
+  --h2-font: monospace;
+  --h3-font: monospace;
+  --h4-font: monospace;
+  --h5-font: monospace;
+  --h6-font: monospace;
+  --font-text: monospace;
 }
 
 body.hide-nav-indentation-guide {
@@ -197,13 +210,18 @@ body.hide-nav-indentation-guide {
 
 .markdown-rendered h1,
 .inline-title {
-  color: transparent;
   border-bottom: var(--border-w) solid var(--color-border-strong);
   padding-bottom: .25em;
   margin-bottom: .8em;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-weight: 800;
+  color: var(--text-accent);
+}
+
+body.header-glow .markdown-rendered h1,
+body.header-glow .inline-title {
+  color: transparent;
   background: linear-gradient(110deg, var(--text-accent) 0%, var(--color-accent-1) 25%, var(--color-accent-2) 50%, var(--text-accent) 75%, var(--color-accent-1) 100%);
   background-size: 200% 100%;
   -webkit-background-clip: text;
@@ -215,20 +233,21 @@ body.hide-nav-indentation-guide {
     0 0 26px color-mix(in oklab, var(--glow-2) 50%, transparent);
   animation: matrix-sheen 6s linear infinite, matrix-pulse 2.6s ease-in-out infinite, matrix-glow 3.2s ease-in-out infinite alternate;
 }
-.markdown-rendered h2 { color: var(--glow-2); font-weight: 700; }
-.markdown-rendered h3 { color: var(--glow-1); }
-.markdown-rendered h4 { color: var(--text-normal); }
-.markdown-rendered h5,
-.markdown-rendered h6 { color: var(--text-faint); }
+body.header-glow .markdown-rendered h2 { color: var(--glow-2); }
+body.header-glow .markdown-rendered h3 { color: var(--glow-1); }
 
 .markdown-rendered p,
 .cm-s-obsidian .cm-line { line-height: 1.7; }
 
 .markdown-source-view.mod-cm6 .cm-header-1 {
-  color: transparent;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-weight: 800;
+  color: var(--text-accent);
+}
+
+body.header-glow .markdown-source-view.mod-cm6 .cm-header-1 {
+  color: transparent;
   background: linear-gradient(110deg, var(--text-accent) 0%, var(--color-accent-1) 25%, var(--color-accent-2) 50%, var(--text-accent) 75%, var(--color-accent-1) 100%);
   background-size: 200% 100%;
   -webkit-background-clip: text;
@@ -240,11 +259,8 @@ body.hide-nav-indentation-guide {
     0 0 26px color-mix(in oklab, var(--glow-2) 50%, transparent);
   animation: matrix-sheen 6s linear infinite, matrix-pulse 2.6s ease-in-out infinite, matrix-glow 3.2s ease-in-out infinite alternate;
 }
-.markdown-source-view.mod-cm6 .cm-header-2 { color: var(--glow-2); font-weight: 700; }
-.markdown-source-view.mod-cm6 .cm-header-3 { color: var(--glow-1); }
-.markdown-source-view.mod-cm6 .cm-header-4 { color: var(--text-normal); }
-.markdown-source-view.mod-cm6 .cm-header-5,
-.markdown-source-view.mod-cm6 .cm-header-6 { color: var(--text-faint); }
+body.header-glow .markdown-source-view.mod-cm6 .cm-header-2 { color: var(--glow-2); }
+body.header-glow .markdown-source-view.mod-cm6 .cm-header-3 { color: var(--glow-1); }
 .markdown-source-view.mod-cm6 .cm-formatting-header { color: color-mix(in oklab, var(--text-accent) 55%, var(--text-faint)); }
 .markdown-source-view.mod-cm6 .cm-line:has(.cm-header-1) { border-bottom: var(--border-w) solid var(--color-border-strong); padding-bottom: .25em; margin-bottom: .8em; }
 
@@ -516,7 +532,7 @@ button:active, .clickable-icon:active, .mod-cta:active { transform: translateY(1
 .metadata-add-button:hover { background: var(--interactive-hover); border-color: var(--interactive-accent); }
 .metadata-property:hover {
   box-shadow: none;
-  border: var(--border-w) solid var(--color-border);
+  outline: var(--border-w) solid var(--color-border);
 }
 
 .internal-embed,
@@ -594,9 +610,9 @@ progress::-webkit-progress-value { background: var(--interactive-accent); border
 
 @media (prefers-reduced-motion: reduce) {
   .matrix-rain-on .workspace::before { display: none; }
-  .inline-title,
-  .markdown-rendered h1,
-  .markdown-source-view.mod-cm6 .cm-header-1 { animation: none; text-shadow: 0 0 6px var(--glow-2); background: none; color: var(--text-accent); -webkit-background-clip: initial; background-clip: initial; }
+  body.header-glow .inline-title,
+  body.header-glow .markdown-rendered h1,
+  body.header-glow .markdown-source-view.mod-cm6 .cm-header-1 { animation: none; text-shadow: 0 0 6px var(--glow-2); background: none; color: var(--text-accent); -webkit-background-clip: initial; background-clip: initial; }
 }
 
 @media (max-width: 768px) {
