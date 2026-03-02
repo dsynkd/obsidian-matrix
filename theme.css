@@ -241,7 +241,7 @@ body.header-glow .markdown-rendered h3 { color: var(--glow-1); }
 
 body.header-underlines .markdown-rendered h1,
 body.header-underlines .inline-title {
-  border-bottom: var(--border-w) solid var(--color-border-strong);
+  border-bottom: var(--border-w) solid var(--color-border);
   padding-bottom: .25em;
   margin-bottom: .8em;
 }
@@ -272,7 +272,6 @@ body.header-glow .markdown-source-view.mod-cm6 .cm-header-1 {
 body.header-glow .markdown-source-view.mod-cm6 .cm-header-2 { color: var(--glow-2); }
 body.header-glow .markdown-source-view.mod-cm6 .cm-header-3 { color: var(--glow-1); }
 .markdown-source-view.mod-cm6 .cm-formatting-header { color: color-mix(in oklab, var(--text-accent) 55%, var(--text-faint)); }
-body.header-underlines .markdown-source-view.mod-cm6 .cm-line:has(.cm-header-1) { border-bottom: var(--border-w) solid var(--color-border-strong); padding-bottom: .25em; margin-bottom: .8em; }
 
 a,
 .internal-link,
