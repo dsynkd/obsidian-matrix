@@ -12,15 +12,20 @@ name: Matrix Rain Effect
 id: matrix-rain-toggle
 settings:
   -
-    title: Enable Matrix Rain
+    title: Enable Transition Animations
+    id: transition-animations-on
+    type: class-toggle
+    default: true
+    class: transition-animations-on
+  -
+    title: Enable Matrix Rain Effect
     id: matrix-rain-on
     type: class-toggle
     default: false
     class: matrix-rain-on
   -
-    title: Rain Speed (seconds)
+    title: Matrix Rain Effect Animation Speed
     id: matrix-rain-duration
-    description: Animation duration in seconds
     type: variable-number-slider
     default: 18
     min: 1
@@ -28,47 +33,41 @@ settings:
     step: 1
     format: s
   -
-    title: Sharp Corners
+    title: Enable Sharp Corners
     id: sharp-corners
     type: class-toggle
     default: true
     class: sharp-corners
   -
-    title: Monospace Font
+    title: Enable Monospace Font
     id: monospace-font
     type: class-toggle
     default: true
     class: monospace-font
+  -
+    title: Enable Header Glow Animation
+    id: header-glow
+    type: class-toggle
+    default: true
+    class: header-glow
+  -
+    title: Enable Header Underlines
+    id: header-underlines
+    type: class-toggle
+    default: true
+    class: header-underlines
+  -
+    title: Enable Compact Add Property Button
+    id: compact-add-property-button
+    type: class-toggle
+    default: true
+    class: compact-add-property-button
   -
     title: Hide Files View Indentation Guide
     id: hide-nav-indentation-guide
     type: class-toggle
     default: true
     class: hide-nav-indentation-guide
-  -
-    title: Header Glow
-    id: header-glow
-    type: class-toggle
-    default: true
-    class: header-glow
-  -
-    title: Header Underlines
-    id: header-underlines
-    type: class-toggle
-    default: true
-    class: header-underlines
-  -
-    title: Compact Add Property Button
-    id: compact-add-property-button
-    type: class-toggle
-    default: true
-    class: compact-add-property-button
-  -
-    title: Enable Transition Animations
-    id: transition-animations-on
-    type: class-toggle
-    default: true
-    class: transition-animations-on
 */
 
 
@@ -924,7 +923,7 @@ button:active,
 }
 
 body:not(.is-grabbing) .tree-item-self.is-clickable:hover {
-  box-shadow: 0 0 0 var(--border-w) var(--color-border-strong);
+  box-shadow: 0 0 0 var(--border-w) var(--color-border);
 }
 
 .metadata-container {
@@ -1202,7 +1201,9 @@ progress::-webkit-progress-value {
 /* MARK: Bases */
 
 .bases-embed {
-  border: var(--border-width) solid var(--color-border);
+  border: var(--border-width) solid var(--background-modifier-border);
+  box-shadow: var(--shadow-1);
+  background: var(--background-secondary);
 }
 
 .bases-toolbar {
