@@ -1300,6 +1300,9 @@ table.calendar div.day {
 }
 
 table.calendar div.day:hover {
-  box-shadow: 0 0 0 var(--border-w) var(--color-border-strong);
+  box-shadow: 0 0 0 var(--border-w) var(--color-border);
 }
 
+table.calendar div.day.today {
+  background-color: var(--background-modifier-active);
+}
