@@ -29,7 +29,7 @@ settings:
     type: variable-number-slider
     default: 18
     min: 1
-    max: 60
+    max: 20
     step: 1
     format: s
   -
@@ -68,6 +68,12 @@ settings:
     type: class-toggle
     default: true
     class: hide-nav-indentation-guide
+  -
+    title: Native Mobile Navbar
+    id: native-mobile-navbar
+    type: class-toggle
+    default: false
+    class: native-mobile-navbar
 */
 
 
@@ -140,6 +146,12 @@ body.sharp-corners {
   --metadata-property-radius-hover: 0;
   --button-radius: 0;
   --metadata-property-radius-focus: 0;
+  --touch-radius-xxs: 0;
+  --touch-radius-xs: 0;
+  --touch-radius-s: 0;
+  --touch-radius-m: 0;
+  --touch-radius-l: 0;
+  --touch-radius-xl: 0;
 }
 
 body.monospace-font {
@@ -767,7 +779,7 @@ button:active,
 .nav-header,
 .nav-files-container {
   background: var(--background-secondary);
-  border: var(--border-width) solid var(--tab-outline-color);
+  border: var(--border-w) solid var(--tab-outline-color);
 }
 
 .nav-file-title,
@@ -931,6 +943,10 @@ body:not(.is-grabbing) .tree-item-self.is-clickable:hover {
   border: var(--border-w) solid var(--background-modifier-border);
   border-radius: var(--radius-m);
   box-shadow: var(--shadow-1);
+}
+
+.is-mobile .metadata-content {
+  background-color: transparent;
 }
 
 .metadata-property {
@@ -1179,6 +1195,33 @@ progress::-webkit-progress-value {
   }
 }
 
+.is-mobile .workspace-drawer-tab-options {
+  margin: 0;
+}
+
+body:not(.native-mobile-navbar).is-mobile .mobile-navbar {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  box-shadow: none !important;
+}
+
+body:not(.native-mobile-navbar).is-mobile .mobile-navbar-actions {
+ gap: var(--size-2-3); 
+}
+
+body:not(.native-mobile-navbar).is-mobile .mobile-navbar .clickable-icon {
+  border: var(--border-w) solid var(--color-border);
+  border-radius: var(--radius-s);
+}
+
+body:not(.native-mobile-navbar).is-mobile .mobile-navbar .mobile-navbar-action.has-longpress-menu {
+  margin-inline-start: 0;
+}
+
+body.native-mobile-navbar.is-mobile .mobile-navbar .clickable-icon {
+  border: none;
+}
+
 .high-contrast .markdown-rendered,
 .high-contrast .cm-editor {
   --text-normal: #ccffdd;
@@ -1211,7 +1254,7 @@ progress::-webkit-progress-value {
 /* MARK: Bases */
 
 .bases-embed {
-  border: var(--border-width) solid var(--background-modifier-border);
+  border: var(--border-w) solid var(--background-modifier-border);
   box-shadow: var(--shadow-1);
   background: var(--background-secondary);
 }
@@ -1221,16 +1264,16 @@ progress::-webkit-progress-value {
 }
 
 .bases-toolbar .bases-toolbar-item:not(.bases-toolbar-results-menu) {
-  border: var(--border-width) solid var(--color-border);
+  border: var(--border-w) solid var(--color-border);
   margin: 0;
 }
 
 .bases-toolbar .bases-toolbar-item:not(.bases-toolbar-results-menu):hover {
-  border: var(--border-width) solid var(--color-border-strong);
+  border: var(--border-w) solid var(--color-border-strong);
 }
 
 .bases-cards-item:hover {
-  box-shadow: 0 0 0 var(--border-width) var(--color-border-strong);
+  box-shadow: 0 0 0 var(--border-w) var(--color-border-strong);
 }
 
 /* MARK: Calendar Plugin */
@@ -1240,5 +1283,6 @@ table.calendar div.day {
 }
 
 table.calendar div.day:hover {
-  box-shadow: 0 0 0 var(--border-width) var(--color-border-strong);
+  box-shadow: 0 0 0 var(--border-w) var(--color-border-strong);
 }
+
