@@ -152,6 +152,7 @@ body.sharp-corners {
   --touch-radius-m: 0;
   --touch-radius-l: 0;
   --touch-radius-xl: 0;
+  --clickable-icon-radius: 0;
 }
 
 body.monospace-font {
@@ -779,7 +780,10 @@ button:active,
 .nav-header,
 .nav-files-container {
   background: var(--background-secondary);
-  border: var(--border-w) solid var(--tab-outline-color);
+}
+
+body:not(.is-mobile) .nav-header {
+  border-bottom: var(--border-width) solid var(--tab-outline-color);
 }
 
 .nav-file-title,
@@ -837,6 +841,19 @@ button:active,
 .view-header {
   background: var(--background-secondary);
   border-bottom: 1px solid var(--background-modifier-border);
+}
+
+body.is-mobile .view-header {
+  border-bottom: none;
+}
+
+body.is-mobile .view-header .clickable-icon {
+  border-radius: var(--radius-s) !important;
+  border: var(--border-w) solid var(--color-border) !important;
+}
+
+body.is-mobile .view-actions {
+  gap: var(--size-2-3);
 }
 
 .view-header-title {
