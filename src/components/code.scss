@@ -114,3 +114,16 @@ pre::before {
 .markdown-rendered code[class*="language-"] .token.keyword {
   color: #57ffaf;
 }
+
+div.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock.HyperMD-codeblock-begin {
+  border-top: var(--border-w) solid var(--color-border);
+}
+
+div.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock {
+  border-left: var(--border-w) solid var(--color-border);
+  border-right: var(--border-w) solid var(--color-border);
+}
+
+div.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock.HyperMD-codeblock-end {
+  border-bottom: var(--border-w) solid var(--color-border);
+}
