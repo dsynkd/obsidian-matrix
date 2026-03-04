@@ -1,0 +1,5 @@
+/* Matrix Theme - Tree Item */
+
+body:not(.is-grabbing) .tree-item-self.is-clickable:hover {
+  box-shadow: 0 0 0 var(--border-w) var(--color-border);
+}
