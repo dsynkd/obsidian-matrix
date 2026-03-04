@@ -1,4 +1,4 @@
-/* Matrix Theme - Base Styles */
+/* Matrix Theme - Transition Animations */
 
 body.transition-animations-on {
   & a,
@@ -48,46 +48,5 @@ body.transition-animations-on {
 
   & table.calendar div.day {
     transition: box-shadow var(--fast);
-  }
-}
-
-::selection {
-  background: var(--text-selection);
-  color: var(--background-primary);
-  text-shadow: none;
-}
-
-::-webkit-scrollbar {
-  width: 12px;
-  height: 12px;
-  background: var(--scrollbar-bg);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--scrollbar-thumb-bg);
-  border-radius: 6px;
-  border: 2px solid var(--scrollbar-bg);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--scrollbar-thumb-hover-bg);
-}
-
-.workspace {
-  background: var(--background-primary);
-}
-
-body.compact-add-property-button {
-  & div.metadata-add-button {
-    position: absolute;
-  }
-
-  & .markdown-source-view div.metadata-add-button {
-    right: 6px;
-    top: 0;
-  }
-
-  & div.metadata-add-button span.text-button-label {
-    display: none;
   }
 }

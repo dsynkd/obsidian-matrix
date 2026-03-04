@@ -49,3 +49,18 @@
 .metadata-properties-heading .collapse-indicator {
   inset-inline-start: -13px;
 }
+
+body.compact-add-property-button {
+  & div.metadata-add-button {
+    position: absolute;
+  }
+
+  & .markdown-source-view div.metadata-add-button {
+    right: 6px;
+    top: 0;
+  }
+
+  & div.metadata-add-button span.text-button-label {
+    display: none;
+  }
+}

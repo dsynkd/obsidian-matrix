@@ -1,11 +1,12 @@
 # MATRIX THEME for Obsidian
+
 A neon-green, cyberpunk Matrix-inspired theme for Obsidian with Live Preview parity, always-on animated H1/inline title glow, and cohesive styling across links, blockquotes, code, tables, and more.
 
 <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/SCR-20250807-rqus-AcoictKbzaOc4V2UsvJBUCUiRksYug.png" alt="Matrix Theme screenshot" width="75%">
 
 ## Features
+
 - Cyberpunk title effect
-  
 - Always-on animated gradient/sheen for `h1` and `.inline-title` with subtle pulse and glow
 - Link glow on hover with underline and offset
 - Code blocks styled as a "MATRIX TERMINAL" with mono font and chromatic glow
@@ -14,4 +15,4 @@ A neon-green, cyberpunk Matrix-inspired theme for Obsidian with Live Preview par
 
 ## Development
 
-The theme is modularized in `components/`. Run `npm run build` to compile with Sass into `dist/theme.css` (Obsidian does not support CSS `@import`).
+The theme is modularized in `src/components/`. Run `npm run build` to compile with Sass into `dist/theme.css` (Obsidian does not support CSS `@import`).

@@ -2,7 +2,7 @@
   "name": "obsidian-matrix-theme",
   "private": true,
   "scripts": {
-    "build": "sass theme.scss dist/theme.css --no-source-map --quiet"
+    "build": "sass src/theme.scss theme.css --no-source-map --quiet"
   },
   "devDependencies": {
     "sass": "^1.80.0"
