@@ -1,0 +1,34 @@
+/* Matrix Theme - Nav Header & File Explorer */
+
+.nav-header,
+.nav-files-container {
+  background: var(--background-secondary);
+}
+
+body:not(.is-mobile) .nav-header {
+  border-bottom: var(--border-width) solid var(--tab-outline-color);
+}
+
+.nav-file-title,
+.nav-folder-title {
+  color: var(--text-normal);
+  border-radius: var(--radius-s);
+  padding: 6px 8px;
+}
+
+.nav-file-title:hover,
+.nav-folder-title:hover {
+  background: var(--background-modifier-hover);
+  color: var(--text-accent);
+}
+
+.nav-file-title.is-active,
+.nav-folder-title.is-active {
+  background: var(--background-modifier-active);
+  color: var(--text-accent);
+  box-shadow: inset 0 0 0 1px var(--interactive-accent);
+}
+
+body:not(.is-grabbing) .tree-item-self.is-clickable:hover {
+  box-shadow: 0 0 0 var(--border-w) var(--color-border);
+}

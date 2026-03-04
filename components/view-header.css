@@ -1,0 +1,30 @@
+/* Matrix Theme - View Header */
+
+.view-header {
+  background: var(--background-secondary);
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+body.is-mobile .view-header {
+  border-bottom: none;
+}
+
+body.is-mobile .view-header .clickable-icon {
+  border-radius: var(--radius-s) !important;
+  border: var(--border-w) solid var(--color-border) !important;
+}
+
+body.is-mobile .view-actions {
+  gap: var(--size-2-3);
+}
+
+.view-header-title {
+  color: var(--text-accent);
+  letter-spacing: 0.04em;
+}
+
+.view-header-nav-buttons,
+.view-actions,
+.nav-buttons-container {
+  gap: var(--size-2-3);
+}

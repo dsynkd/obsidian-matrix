@@ -1,0 +1,51 @@
+/* Matrix Theme - Metadata & Properties */
+
+.metadata-container {
+  background: var(--background-secondary);
+  border: var(--border-w) solid var(--background-modifier-border);
+  border-radius: var(--radius-m);
+  box-shadow: var(--shadow-1);
+}
+
+.is-mobile .metadata-content {
+  background-color: transparent;
+}
+
+.metadata-property {
+  border-bottom: 1px dashed var(--background-modifier-border);
+}
+
+.metadata-property-key {
+  color: var(--text-accent);
+  font-weight: 600;
+}
+
+.metadata-add-button {
+  background: var(--interactive-normal);
+  border: var(--border-w) solid var(--color-border);
+}
+
+.mod-sidedock .metadata-add-button {
+  position: absolute;
+  left: 0;
+  margin-top: 1.5em;
+}
+
+.mod-sidedock .metadata-container {
+  padding: 3px 10px 10px;
+}
+
+.metadata-add-button:hover {
+  background: var(--interactive-hover);
+  border-color: var(--interactive-accent);
+}
+
+.metadata-property:hover,
+.metadata-property:focus-within {
+  box-shadow: 0 0 0 var(--border-w) var(--color-border) !important;
+  z-index: 2;
+}
+
+.metadata-properties-heading .collapse-indicator {
+  inset-inline-start: -13px;
+}

@@ -1,0 +1,93 @@
+/* Matrix Theme - Base Styles */
+
+body.transition-animations-on {
+  & a,
+  & .internal-link,
+  & .external-link,
+  & .cm-s-obsidian span.cm-link {
+    transition: color var(--fast), text-shadow var(--fast), background var(--fast);
+  }
+
+  & input[type="search"],
+  & input[type="number"],
+  & input[type="email"],
+  & textarea,
+  & select {
+    transition: border-color var(--fast), box-shadow var(--fast), background var(--fast);
+  }
+
+  & button,
+  & .clickable-icon,
+  & .mod-cta {
+    transition: background var(--fast), border-color var(--fast), transform var(--fast);
+  }
+
+  & .workspace-tab-header {
+    transition: border-color var(--fast);
+  }
+
+  & .tree-item-self {
+    transition: box-shadow var(--fast);
+  }
+
+  & .metadata-property {
+    transition: box-shadow var(--fast);
+  }
+
+  & .metadata-add-button {
+    transition: border-color var(--fast);
+  }
+
+  & .bases-toolbar .bases-toolbar-item:not(.bases-toolbar-results-menu) {
+    transition: border-color var(--fast);
+  }
+
+  & .bases-cards-item {
+    transition: box-shadow var(--fast);
+  }
+
+  & table.calendar div.day {
+    transition: box-shadow var(--fast);
+  }
+}
+
+::selection {
+  background: var(--text-selection);
+  color: var(--background-primary);
+  text-shadow: none;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+  background: var(--scrollbar-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb-bg);
+  border-radius: 6px;
+  border: 2px solid var(--scrollbar-bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover-bg);
+}
+
+.workspace {
+  background: var(--background-primary);
+}
+
+body.compact-add-property-button {
+  & div.metadata-add-button {
+    position: absolute;
+  }
+
+  & .markdown-source-view div.metadata-add-button {
+    right: 6px;
+    top: 0;
+  }
+
+  & div.metadata-add-button span.text-button-label {
+    display: none;
+  }
+}

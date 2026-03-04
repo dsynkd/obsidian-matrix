@@ -1,0 +1,42 @@
+/* Matrix Theme - Tab Bar */
+
+.workspace-tab-header {
+  border: var(--border-w) solid var(--color-border);
+  border-radius: var(--radius-s) !important;
+  padding: 0 !important;
+}
+
+.workspace-tab-header:hover {
+  color: var(--text-accent);
+  background: var(--background-modifier-hover);
+  border-radius: var(--radius-s);
+  background: var(--background-modifier-hover);
+  border-color: var(--interactive-accent);
+}
+
+.workspace-tab-header.is-active {
+  color: var(--text-accent);
+  background: var(--background-modifier-active);
+  border-radius: var(--radius-s);
+  border-color: var(--interactive-accent);
+}
+
+.mod-root .workspace-tab-header-container-inner {
+  gap: var(--size-2-3);
+  margin-bottom: 4px;
+  margin-top: 5px;
+}
+
+.workspace-split.mod-root .workspace-tab-header-container .workspace-tab-header.is-active::before,
+.workspace-split.mod-root .workspace-tab-header-container .workspace-tab-header.is-active::after {
+  box-shadow: none;
+}
+
+.mod-left-split .workspace-tab-header-container .workspace-tab-header-container-inner,
+.mod-right-split .workspace-tab-header-container .workspace-tab-header-container-inner {
+  gap: var(--size-2-3) !important;
+}
+
+.workspace-tab-header-new-tab {
+  margin-inline-end: var(--size-2-3);
+}

@@ -1,0 +1,81 @@
+/* Matrix Theme - Headers (H1, H2, H3, Inline Title) */
+
+.markdown-rendered h1,
+.inline-title {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 800;
+  color: var(--text-accent);
+}
+
+body.header-glow .markdown-rendered h1,
+body.header-glow .inline-title {
+  color: transparent;
+  background: linear-gradient(110deg, var(--text-accent) 0%, var(--color-accent-1) 25%, var(--color-accent-2) 50%, var(--text-accent) 75%, var(--color-accent-1) 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow:
+    0 0 1px color-mix(in oklab, var(--text-accent) 60%, transparent),
+    0 0 6px var(--glow-2),
+    0 0 14px var(--glow-1),
+    0 0 26px color-mix(in oklab, var(--glow-2) 50%, transparent);
+  animation: matrix-sheen 6s linear infinite, matrix-pulse 2.6s ease-in-out infinite, matrix-glow 3.2s ease-in-out infinite alternate;
+}
+
+body.header-glow .markdown-rendered h2 {
+  color: var(--glow-2);
+}
+
+body.header-glow .markdown-rendered h3 {
+  color: var(--glow-1);
+}
+
+body.header-underlines .markdown-rendered h1,
+body.header-underlines .inline-title,
+body.header-underlines .markdown-source-view.is-live-preview.mod-cm6 .cm-line:has(.cm-header-1) {
+  border-bottom: var(--border-w) solid var(--color-border);
+  margin-bottom: .5em;
+}
+
+body.header-underlines .inline-title {
+  padding-bottom: .25em;
+}
+
+body.header-underlines .markdown-rendered h1,
+body.header-underlines .markdown-source-view.is-live-preview.mod-cm6 .cm-line:has(.cm-header-1) {
+  padding-bottom: 0;
+}
+
+.markdown-source-view.mod-cm6 .cm-header-1 {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 800;
+  color: var(--text-accent);
+}
+
+body.header-glow .markdown-source-view.mod-cm6 .cm-header-1 {
+  color: transparent;
+  background: linear-gradient(110deg, var(--text-accent) 0%, var(--color-accent-1) 25%, var(--color-accent-2) 50%, var(--text-accent) 75%, var(--color-accent-1) 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow:
+    0 0 1px color-mix(in oklab, var(--text-accent) 60%, transparent),
+    0 0 6px var(--glow-2),
+    0 0 14px var(--glow-1),
+    0 0 26px color-mix(in oklab, var(--glow-2) 50%, transparent);
+  animation: matrix-sheen 6s linear infinite, matrix-pulse 2.6s ease-in-out infinite, matrix-glow 3.2s ease-in-out infinite alternate;
+}
+
+body.header-glow .markdown-source-view.mod-cm6 .cm-header-2 {
+  color: var(--glow-2);
+}
+
+body.header-glow .markdown-source-view.mod-cm6 .cm-header-3 {
+  color: var(--glow-1);
+}
+
+.markdown-source-view.mod-cm6 .cm-formatting-header {
+  color: color-mix(in oklab, var(--text-accent) 55%, var(--text-faint));
+}

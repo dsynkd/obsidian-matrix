@@ -1,0 +1,29 @@
+/* Matrix Theme - Embeds & Backlinks */
+
+.internal-embed,
+.image-embed,
+.file-embed {
+  background: var(--background-secondary);
+  border: var(--border-w) solid var(--color-border);
+  border-radius: var(--radius-m);
+  overflow: hidden;
+  box-shadow: var(--shadow-1);
+}
+
+.markdown-embed-title {
+  background: var(--background-secondary-alt);
+  color: var(--text-accent);
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.backlink-pane,
+.outgoing-link-pane {
+  background: var(--background-secondary);
+  border-top: 1px solid var(--background-modifier-border);
+}
+
+.backlink-pane .tree-item-self.is-active,
+.outgoing-link-pane .tree-item-self.is-active {
+  background: var(--background-modifier-active);
+  color: var(--text-accent);
+}

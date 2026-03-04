@@ -1,0 +1,175 @@
+/* Matrix Theme - Variables & Theme Colors */
+
+:root {
+  --radius-s: 6px;
+  --radius-m: 10px;
+  --radius-l: 14px;
+  --border-w: 1.5px;
+  --fast: 120ms;
+  --med: 180ms;
+  --slow: 260ms;
+  --matrix-rain-duration: 18s;
+}
+
+.theme-dark {
+  --background-primary: #000000;
+  --background-primary-alt: #030d06;
+  --background-secondary: #06160d;
+  --background-secondary-alt: #0a2015;
+  --background-modifier-hover: #103422;
+  --background-modifier-active: #164a30;
+  --background-modifier-border: #0b2a1a;
+  --background-modifier-form-field: #07140c;
+  --background-modifier-form-field-highlighted: #0e2117;
+  --background-modifier-cover: rgba(0, 0, 0, 0.82);
+
+  --text-normal: #00ff41;
+  --text-muted: #7affe0;
+  --text-faint: #25b07b;
+  --text-on-accent: #001e0f;
+  --text-accent: #00ff9c;
+  --text-accent-hover: #00ff41;
+  --text-error: #ff5a5a;
+  --text-warning: #ffd166;
+  --text-success: #7dff93;
+  --text-selection: #00ffaa;
+
+  --interactive-normal: #0a2418;
+  --interactive-hover: #133222;
+  --interactive-accent: #00ff41;
+  --interactive-accent-hover: #00ffaa;
+
+  --accent-h: 140;
+  --accent-s: 100%;
+  --accent-l: 50%;
+
+  --color-accent-1: #00ffaa;
+  --color-accent-2: #00ff41;
+  --color-border-strong: #00ff41;
+  --color-border: #0a7a3f;
+  --color-outline: #00ffaa;
+
+  --code-background: #0d0208;
+  --code-border: #00ffaa;
+  --code-fg: #00ff41;
+
+  --tag-background: #042416;
+  --tag-border: #00ffaa;
+  --tag-foreground: #00ff41;
+
+  --scrollbar-bg: #0d0208;
+  --scrollbar-thumb-bg: #003b00;
+  --scrollbar-thumb-hover-bg: #00ff41;
+
+  --graph-text: #00ff9c;
+  --graph-line: #007a3f;
+  --graph-node: #00ff41;
+  --graph-node-focus: #00ffaa;
+
+  --glow-1: #00ffaa;
+  --glow-2: #00ff41;
+
+  --shadow-1: 0 0 0 1px #08351f inset, 0 0 12px rgba(0, 255, 170, 0.08);
+  --shadow-2: 0 0 0 1px #0a5230 inset, 0 0 22px rgba(0, 255, 65, 0.10);
+}
+
+.theme-light {
+  --background-primary: #f5fff7;
+  --background-primary-alt: #edfff3;
+  --background-secondary: #e8fff0;
+  --background-secondary-alt: #dcffea;
+  --background-modifier-hover: #c9ffe0;
+  --background-modifier-active: #b6ffd6;
+  --background-modifier-border: #a7e8c7;
+  --background-modifier-form-field: #edfff3;
+  --background-modifier-form-field-highlighted: #dbffe9;
+  --background-modifier-cover: rgba(255, 255, 255, 0.85);
+
+  --text-normal: #0f5132;
+  --text-muted: #287d57;
+  --text-faint: #539e7a;
+  --text-on-accent: #001b0e;
+  --text-accent: #0c7a4b;
+  --text-accent-hover: #095f3a;
+  --text-error: #b00020;
+  --text-warning: #a06000;
+  --text-success: #0f7a3a;
+  --text-selection: #a2ffd6;
+
+  --interactive-normal: #eafff3;
+  --interactive-hover: #d2ffe6;
+  --interactive-accent: #0c7a4b;
+  --interactive-accent-hover: #0aa767;
+
+  --accent-h: 150;
+  --accent-s: 60%;
+  --accent-l: 32%;
+
+  --color-accent-1: #0aa767;
+  --color-accent-2: #0c7a4b;
+  --color-border-strong: #0c7a4b;
+  --color-border: #a7e8c7;
+  --color-outline: #0aa767;
+
+  --code-background: #f0fff7;
+  --code-border: #a7e8c7;
+  --code-fg: #0c7a4b;
+
+  --tag-background: #e3fff0;
+  --tag-border: #a7e8c7;
+  --tag-foreground: #0f5132;
+
+  --scrollbar-bg: #edfff3;
+  --scrollbar-thumb-bg: #c9ffe0;
+  --scrollbar-thumb-hover-bg: #0c7a4b;
+
+  --graph-text: #0c7a4b;
+  --graph-line: #a7e8c7;
+  --graph-node: #0aa767;
+  --graph-node-focus: #0c7a4b;
+
+  --glow-1: rgba(12, 122, 75, 0.25);
+  --glow-2: rgba(10, 167, 103, 0.2);
+
+  --shadow-1: 0 0 0 1px #c9ffe0 inset, 0 0 12px rgba(12, 122, 75, 0.08);
+  --shadow-2: 0 0 0 1px #a7e8c7 inset, 0 0 22px rgba(10, 167, 103, 0.10);
+}
+
+.theme-dark,
+.theme-light {
+  color: var(--text-normal);
+  background-color: var(--background-primary);
+}
+
+/* Body toggle classes */
+body.sharp-corners {
+  --radius-s: 0;
+  --radius-m: 0;
+  --radius-l: 0;
+  --metadata-property-radius-hover: 0;
+  --button-radius: 0;
+  --metadata-property-radius-focus: 0;
+  --touch-radius-xxs: 0;
+  --touch-radius-xs: 0;
+  --touch-radius-s: 0;
+  --touch-radius-m: 0;
+  --touch-radius-l: 0;
+  --touch-radius-xl: 0;
+  --clickable-icon-radius: 0;
+}
+
+body.monospace-font {
+  --font-interface: monospace;
+  --file-header-font: monospace;
+  --h1-font: monospace;
+  --h2-font: monospace;
+  --h3-font: monospace;
+  --h4-font: monospace;
+  --h5-font: monospace;
+  --h6-font: monospace;
+  --font-text: monospace;
+}
+
+body.hide-nav-indentation-guide {
+  --nav-indentation-guide-width: 0;
+}

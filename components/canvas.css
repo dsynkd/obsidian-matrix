@@ -1,0 +1,18 @@
+/* Matrix Theme - Canvas */
+
+.canvas {
+  background: var(--background-primary);
+}
+
+.canvas .canvas-node,
+.canvas .canvas-card {
+  background: var(--background-secondary);
+  color: var(--text-normal);
+  border: var(--border-w) solid var(--color-border);
+  border-radius: var(--radius-m);
+  box-shadow: var(--shadow-1);
+}
+
+.canvas .edge {
+  stroke: var(--graph-line) !important;
+}

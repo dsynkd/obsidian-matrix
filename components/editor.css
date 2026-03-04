@@ -1,0 +1,32 @@
+/* Matrix Theme - Editor & Source View */
+
+.markdown-source-view,
+.markdown-reading-view {
+  background: var(--background-primary);
+}
+
+.cm-editor,
+.cm-scroller {
+  background: var(--background-primary);
+}
+
+.cm-editor .cm-cursor,
+textarea {
+  caret-color: var(--interactive-accent);
+}
+
+.cm-activeLine {
+  background: color-mix(in oklab, var(--text-accent) 12%, transparent);
+}
+
+.cm-selectionBackground,
+.cm-content ::selection {
+  background: var(--text-selection);
+  color: var(--background-primary);
+}
+
+.markdown-source-view .metadata-container,
+.markdown-preview-view .metadata-container {
+  transform: none;
+  padding: 10px;
+}

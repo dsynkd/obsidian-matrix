@@ -1,0 +1,38 @@
+/* Matrix Theme - Plugin Overrides (Bases, Calendar) */
+
+/* MARK: Bases */
+.bases-embed {
+  border: var(--border-w) solid var(--background-modifier-border);
+  box-shadow: var(--shadow-1);
+  background: var(--background-secondary);
+}
+
+.bases-toolbar {
+  gap: var(--size-2-3);
+}
+
+.bases-toolbar .bases-toolbar-item:not(.bases-toolbar-results-menu) {
+  border: var(--border-w) solid var(--color-border);
+  margin: 0;
+}
+
+.bases-toolbar .bases-toolbar-item:not(.bases-toolbar-results-menu):hover {
+  border: var(--border-w) solid var(--color-border-strong);
+}
+
+.bases-cards-item:hover {
+  box-shadow: 0 0 0 var(--border-w) var(--color-border-strong);
+}
+
+/* MARK: Calendar Plugin */
+table.calendar div.day {
+  border-radius: var(--radius-s);
+}
+
+table.calendar div.day:hover {
+  box-shadow: 0 0 0 var(--border-w) var(--color-border);
+}
+
+table.calendar div.day.today {
+  background-color: var(--background-modifier-active);
+}

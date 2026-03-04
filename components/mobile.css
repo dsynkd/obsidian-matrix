@@ -1,0 +1,44 @@
+/* Matrix Theme - Mobile & Responsive */
+
+@media (max-width: 768px) {
+
+  .workspace-ribbon,
+  .side-dock-ribbon {
+    border-right-width: 1px;
+  }
+
+  .inline-title {
+    font-size: 1.2em;
+  }
+
+  .markdown-rendered {
+    font-size: 1.02em;
+  }
+}
+
+.is-mobile .workspace-drawer-tab-options {
+  margin: 0;
+}
+
+body:not(.native-mobile-navbar).is-mobile .mobile-navbar {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  box-shadow: none !important;
+}
+
+body:not(.native-mobile-navbar).is-mobile .mobile-navbar-actions {
+  gap: var(--size-2-3);
+}
+
+body:not(.native-mobile-navbar).is-mobile .mobile-navbar .clickable-icon {
+  border: var(--border-w) solid var(--color-border);
+  border-radius: var(--radius-s);
+}
+
+body:not(.native-mobile-navbar).is-mobile .mobile-navbar .mobile-navbar-action.has-longpress-menu {
+  margin-inline-start: 0;
+}
+
+body.native-mobile-navbar.is-mobile .mobile-navbar .clickable-icon {
+  border: none;
+}

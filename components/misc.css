@@ -1,0 +1,68 @@
+/* Matrix Theme - Misc (Titlebar, Dataview, Mermaid, Diagnostics) */
+
+.titlebar,
+.titlebar-inner {
+  background: var(--background-secondary);
+  color: var(--text-normal);
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.dataview.table-view-table {
+  background: var(--background-secondary);
+  border: 2px solid var(--color-accent-1);
+  border-radius: var(--radius-s);
+  overflow: hidden;
+}
+
+.dataview.table-view-thead {
+  background: var(--background-secondary-alt);
+  color: var(--text-accent);
+  border-bottom: 2px solid var(--color-border-strong);
+}
+
+.dataview.table-view-table td,
+.dataview.table-view-table th {
+  border-bottom: 1px solid var(--background-modifier-border);
+  padding: .55em .7em;
+}
+
+.mermaid {
+  --mermaid-theme: dark;
+  --mermaid-themeVariables-primaryColor: var(--background-secondary);
+  --mermaid-themeVariables-primaryTextColor: var(--text-normal);
+  --mermaid-themeVariables-primaryBorderColor: var(--color-border);
+  --mermaid-themeVariables-lineColor: var(--graph-line);
+}
+
+.is-warning,
+.callout[data-callout="warning"] {
+  border-left-color: var(--text-warning);
+}
+
+.is-error,
+.callout[data-callout="failure"],
+.cm-line.diagnostic-error {
+  border-left-color: var(--text-error);
+}
+
+.is-success,
+.callout[data-callout="success"] {
+  border-left-color: var(--text-success);
+}
+
+.notice {
+  background: var(--background-secondary);
+  color: var(--text-normal);
+  border: var(--border-w) solid var(--color-border);
+  border-left: 3px solid var(--interactive-accent);
+  border-radius: var(--radius-m);
+  box-shadow: var(--shadow-2);
+}
+
+.high-contrast .markdown-rendered,
+.high-contrast .cm-editor {
+  --text-normal: #ccffdd;
+  --text-muted: #a6ffe8;
+  --color-border: #00bf66;
+  --background-modifier-hover: #124e34;
+}

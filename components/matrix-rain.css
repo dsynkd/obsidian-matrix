@@ -1,0 +1,29 @@
+/* Matrix Theme - Matrix Rain Effect */
+
+.matrix-rain-on .workspace::before {
+  content: "";
+  position: fixed;
+  inset: -100% -10% -100% -10%;
+  pointer-events: none;
+  background: repeating-linear-gradient(0deg, transparent, transparent 12px, color-mix(in oklab, var(--glow-1) 18%, transparent) 13px, color-mix(in oklab, var(--glow-2) 22%, transparent) 15px);
+  animation: matrix-rain-fall var(--matrix-rain-duration) linear infinite;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .matrix-rain-on .workspace::before {
+    display: none;
+  }
+
+  body.header-glow .inline-title,
+  body.header-glow .markdown-rendered h1,
+  body.header-glow .markdown-source-view.mod-cm6 .cm-header-1 {
+    animation: none;
+    text-shadow: 0 0 6px var(--glow-2);
+    background: none;
+    color: var(--text-accent);
+    -webkit-background-clip: initial;
+    background-clip: initial;
+  }
+}

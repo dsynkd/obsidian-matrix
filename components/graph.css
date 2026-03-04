@@ -1,0 +1,27 @@
+/* Matrix Theme - Graph View */
+
+.graph-view {
+  --graph-text: var(--graph-text);
+  --graph-line: var(--graph-line);
+  --graph-node: var(--graph-node);
+  --graph-node-focus: var(--graph-node-focus);
+}
+
+.graph-controls,
+.mod-root .graph-controls {
+  background: var(--background-secondary);
+  border: var(--border-w) solid var(--background-modifier-border);
+  border-radius: var(--radius-s);
+}
+
+.graph-view.color-fill {
+  color: var(--graph-node);
+}
+
+.graph-view.color-circle {
+  color: var(--graph-node-focus);
+}
+
+.graph-view.color-line {
+  color: var(--graph-line);
+}

@@ -1,0 +1,59 @@
+/* Matrix Theme - Form Elements */
+
+input[type="text"],
+input[type="search"],
+input[type="number"],
+input[type="email"],
+textarea,
+select {
+  background: var(--background-modifier-form-field);
+  color: var(--text-normal);
+  border-radius: var(--radius-s);
+  border: none;
+  box-shadow: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--color-outline);
+  box-shadow: 0 0 0 2px color-mix(in oklab, var(--color-outline) 30%, transparent);
+}
+
+button,
+.clickable-icon,
+.mod-cta {
+  background: var(--interactive-normal);
+  color: var(--text-normal);
+  border: var(--border-w) solid var(--color-border);
+  border-radius: var(--radius-s);
+}
+
+button:hover,
+.clickable-icon:hover,
+.mod-cta:hover {
+  background: var(--interactive-hover);
+  border-color: var(--interactive-accent);
+}
+
+button:active,
+.clickable-icon:active,
+.mod-cta:active {
+  transform: translateY(1px);
+}
+
+input[type="range"] {
+  accent-color: var(--interactive-accent);
+}
+
+progress,
+progress::-webkit-progress-bar {
+  background: var(--background-modifier-border);
+  border-radius: var(--radius-s);
+}
+
+progress::-webkit-progress-value {
+  background: var(--interactive-accent);
+  border-radius: var(--radius-s);
+}

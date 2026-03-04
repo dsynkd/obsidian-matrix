@@ -1,0 +1,10 @@
+{
+  "name": "obsidian-matrix-theme",
+  "private": true,
+  "scripts": {
+    "build": "vite build && rm -f dist/entry.js"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0"
+  }
+}

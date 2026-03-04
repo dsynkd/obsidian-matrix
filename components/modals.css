@@ -1,0 +1,50 @@
+/* Matrix Theme - Modals, Menus & Tooltips */
+
+.modal-bg {
+  background: var(--background-modifier-cover);
+  backdrop-filter: blur(2px);
+}
+
+.modal,
+.menu,
+.prompt,
+.suggestion-container {
+  background: var(--background-secondary);
+  border: var(--border-w) solid var(--color-border);
+  border-radius: var(--radius-m);
+  box-shadow: var(--shadow-2);
+}
+
+.menu-separator {
+  background: var(--background-modifier-border);
+}
+
+.menu-item,
+.suggestion-item {
+  color: var(--text-normal);
+  border-radius: var(--radius-s);
+}
+
+.menu-item:hover,
+.menu-item.is-selected,
+.suggestion-item.is-selected {
+  background: var(--background-modifier-hover);
+  color: var(--text-accent);
+}
+
+.prompt-instruction {
+  color: var(--text-faint);
+}
+
+.tooltip {
+  background: var(--background-secondary-alt);
+  color: var(--text-normal);
+  border: var(--border-w) solid var(--color-border);
+  border-radius: var(--radius-s);
+  box-shadow: var(--shadow-1);
+}
+
+.tooltip.mod-error {
+  background: var(--background-secondary-alt);
+  color: var(--text-normal);
+}

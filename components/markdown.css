@@ -1,0 +1,121 @@
+/* Matrix Theme - Markdown Content (Lists, Blockquote, Tables, Tags) */
+
+.markdown-rendered p,
+.cm-s-obsidian .cm-line {
+  line-height: 1.7;
+}
+
+.markdown-rendered ul,
+.markdown-rendered ol {
+  padding-inline-start: 1.3em;
+}
+
+.markdown-rendered li {
+  margin: 0.2em 0;
+}
+
+.markdown-rendered .task-list-item-checkbox,
+input[type="checkbox"] {
+  inline-size: 1.1em;
+  block-size: 1.1em;
+  border-radius: 4px;
+  accent-color: var(--interactive-accent);
+  background: var(--background-modifier-form-field);
+  border: 2px solid var(--color-border);
+}
+
+.markdown-rendered .task-list-item.is-checked>.task-list-item-checkbox {
+  border-color: var(--interactive-accent);
+}
+
+.markdown-rendered blockquote,
+.callout {
+  background: color-mix(in oklab, var(--text-accent) 10%, var(--background-secondary));
+  border-left: 3px solid var(--color-accent-1);
+  border-radius: 0 var(--radius-m) var(--radius-m) 0;
+  padding: 1em 1.1em;
+  color: var(--text-normal);
+  box-shadow: var(--shadow-1);
+  margin: 1.1em 0;
+}
+
+.callout .callout-title {
+  color: var(--text-accent);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.markdown-source-view.mod-cm6 .cm-line:has(.cm-quote) {
+  background: color-mix(in oklab, var(--text-accent) 10%, var(--background-secondary));
+  border-left: 3px solid var(--color-accent-1);
+  border-radius: 0 var(--radius-m) var(--radius-m) 0;
+  padding: 0.6em 1.1em;
+  color: var(--text-normal);
+  box-shadow: var(--shadow-1);
+  margin: 0.35em 0;
+}
+
+.markdown-source-view.mod-cm6 .cm-formatting-quote {
+  color: var(--text-accent);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.markdown-source-view.mod-cm6 .cm-line:has(.cm-quote)+.cm-line:has(.cm-quote) {
+  margin-top: 0;
+}
+
+.markdown-source-view.mod-cm6 .cm-line:has(.cm-quote):not(:first-child) {
+  border-top-left-radius: 0;
+  border-top-right-radius: var(--radius-m);
+}
+
+.markdown-source-view.mod-cm6 .cm-line:has(.cm-quote):not(:last-child) {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: var(--radius-m);
+}
+
+.markdown-rendered table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--background-secondary);
+  border: 2px solid var(--color-accent-1);
+  border-radius: var(--radius-s);
+  overflow: hidden;
+  box-shadow: var(--shadow-1);
+}
+
+.markdown-rendered th,
+.markdown-rendered thead td {
+  background: var(--background-secondary-alt);
+  color: var(--text-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-bottom: 2px solid var(--color-border-strong);
+  padding: .6em .7em;
+}
+
+.markdown-rendered td {
+  border-bottom: 1px solid var(--background-modifier-border);
+  padding: .55em .7em;
+}
+
+.markdown-rendered tr:nth-child(even) {
+  background: var(--background-primary-alt);
+}
+
+.tag,
+.cm-s-obsidian span.cm-hashtag {
+  background: var(--tag-background);
+  color: var(--tag-foreground) !important;
+  border: var(--border-w) solid var(--tag-border);
+  border-radius: 999px;
+  padding: 2px 10px;
+  font-weight: 600;
+  box-shadow: 0 0 10px rgba(0, 255, 170, 0.08);
+}
+
+.tag:hover {
+  background: color-mix(in oklab, var(--tag-foreground) 14%, var(--tag-background));
+}

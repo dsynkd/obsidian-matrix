@@ -1,0 +1,20 @@
+/* Matrix Theme - Search Results */
+
+.search-result-container {
+  background: var(--background-secondary);
+}
+
+.search-result-file-title {
+  color: var(--text-accent);
+}
+
+.search-result-file-matches .search-result-file-match {
+  background: color-mix(in oklab, var(--text-accent) 10%, transparent);
+  border-radius: var(--radius-s);
+  padding: 2px 4px;
+}
+
+.search-result-file-matched-text {
+  color: var(--text-normal);
+  text-decoration: underline;
+}

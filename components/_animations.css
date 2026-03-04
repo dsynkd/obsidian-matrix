@@ -1,0 +1,43 @@
+/* Matrix Theme - Keyframe Animations */
+
+@keyframes matrix-glow {
+  from {
+    text-shadow: 0 0 6px var(--glow-1), 0 0 0 transparent;
+  }
+
+  to {
+    text-shadow: 0 0 18px var(--glow-1), 0 0 28px var(--glow-2);
+  }
+}
+
+@keyframes matrix-pulse {
+
+  0%,
+  100% {
+    opacity: .88;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes matrix-sheen {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: -200% 50%;
+  }
+}
+
+@keyframes matrix-rain-fall {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(300px);
+  }
+}

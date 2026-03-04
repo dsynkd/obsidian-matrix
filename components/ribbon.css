@@ -1,0 +1,21 @@
+/* Matrix Theme - Ribbon (Side Dock) */
+
+.workspace-ribbon,
+.side-dock-ribbon {
+  background: var(--background-secondary);
+  border-right: 2px solid var(--background-modifier-border);
+}
+
+.side-dock-ribbon-action {
+  color: var(--text-muted);
+}
+
+.side-dock-ribbon-action:hover {
+  color: var(--text-accent);
+  background: var(--background-modifier-hover);
+  border-radius: var(--radius-s);
+}
+
+.workspace-drawer-vault-actions {
+  gap: var(--size-2-3);
+}

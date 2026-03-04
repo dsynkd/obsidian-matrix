@@ -1,0 +1,25 @@
+/* Matrix Theme - Links */
+
+a,
+.internal-link,
+.external-link,
+.cm-s-obsidian span.cm-link {
+  color: var(--text-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover,
+.internal-link:hover,
+.external-link:hover,
+.cm-s-obsidian span.cm-link:hover {
+  color: var(--text-accent-hover);
+  background: color-mix(in oklab, var(--text-accent) 12%, transparent);
+  text-shadow: 0 0 6px var(--glow-2);
+}
+
+.markdown-rendered .is-unresolved,
+.cm-s-obsidian .is-unresolved {
+  color: color-mix(in oklab, var(--text-accent) 55%, var(--text-faint));
+  text-decoration-style: dashed;
+}
