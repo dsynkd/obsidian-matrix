@@ -1,0 +1,26 @@
+/* Matrix Theme - Diagnostics */
+
+.is-warning,
+.callout[data-callout="warning"] {
+  border-left-color: var(--text-warning);
+}
+
+.is-error,
+.callout[data-callout="failure"],
+.cm-line.diagnostic-error {
+  border-left-color: var(--text-error);
+}
+
+.is-success,
+.callout[data-callout="success"] {
+  border-left-color: var(--text-success);
+}
+
+.notice {
+  background: var(--background-secondary);
+  color: var(--text-normal);
+  border: var(--border-w) solid var(--color-border);
+  border-left: 3px solid var(--interactive-accent);
+  border-radius: var(--radius-m);
+  box-shadow: var(--shadow-2);
+}

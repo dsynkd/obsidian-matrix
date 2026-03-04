@@ -1,0 +1,13 @@
+/* Matrix Theme - Calendar Plugin */
+
+table.calendar div.day {
+  border-radius: var(--radius-s);
+}
+
+table.calendar div.day:hover {
+  box-shadow: 0 0 0 var(--border-w) var(--color-border);
+}
+
+table.calendar div.day.today {
+  background-color: var(--background-modifier-active);
+}

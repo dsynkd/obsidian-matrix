@@ -1,0 +1,8 @@
+/* Matrix Theme - Titlebar */
+
+.titlebar,
+.titlebar-inner {
+  background: var(--background-secondary);
+  color: var(--text-normal);
+  border-bottom: 1px solid var(--background-modifier-border);
+}

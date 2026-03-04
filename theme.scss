@@ -77,43 +77,50 @@ settings:
 */
 
 /* Core */
-@import url('./components/_variables.css');
-@import url('./components/_animations.css');
-@import url('./components/_base.css');
+@import 'components/variables';
+@import 'components/animations';
+@import 'components/base';
 
 /* UI Components */
-@import url('./components/status-bar.css');
-@import url('./components/view-header.css');
-@import url('./components/tab-bar.css');
-@import url('./components/ribbon.css');
-@import url('./components/nav-header.css');
+@import 'components/status-bar';
+@import 'components/view-header';
+@import 'components/tab-bar';
+@import 'components/ribbon';
+@import 'components/nav-header';
+@import 'components/titlebar';
 
 /* Modals & Forms */
-@import url('./components/modals.css');
-@import url('./components/forms.css');
+@import 'components/modals';
+@import 'components/forms';
 
 /* Editor & Content */
-@import url('./components/editor.css');
-@import url('./components/headers.css');
-@import url('./components/links.css');
-@import url('./components/code.css');
-@import url('./components/markdown.css');
+@import 'components/editor';
+@import 'components/headers';
+@import 'components/links';
+@import 'components/code';
+@import 'components/markdown';
 
 /* Search & Metadata */
-@import url('./components/search.css');
-@import url('./components/metadata.css');
+@import 'components/search';
+@import 'components/metadata';
 
 /* Embeds & Panes */
-@import url('./components/embeds.css');
+@import 'components/embeds';
 
 /* Views */
-@import url('./components/graph.css');
-@import url('./components/canvas.css');
+@import 'components/graph';
+@import 'components/canvas';
 
 /* Effects & Responsive */
-@import url('./components/matrix-rain.css');
-@import url('./components/mobile.css');
+@import 'components/matrix-rain';
+@import 'components/mobile';
 
-/* Misc & Plugins */
-@import url('./components/misc.css');
-@import url('./components/plugins.css');
+/* Misc */
+@import 'components/mermaid';
+@import 'components/diagnostics';
+@import 'components/high-contrast';
+
+/* Plugins */
+@import 'components/bases';
+@import 'components/dataview';
+@import 'components/calendar';

@@ -1,0 +1,9 @@
+/* Matrix Theme - Mermaid Plugin */
+
+.mermaid {
+  --mermaid-theme: dark;
+  --mermaid-themeVariables-primaryColor: var(--background-secondary);
+  --mermaid-themeVariables-primaryTextColor: var(--text-normal);
+  --mermaid-themeVariables-primaryBorderColor: var(--color-border);
+  --mermaid-themeVariables-lineColor: var(--graph-line);
+}

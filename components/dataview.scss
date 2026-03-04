@@ -1,0 +1,20 @@
+/* Matrix Theme - Dataview Plugin */
+
+.dataview.table-view-table {
+  background: var(--background-secondary);
+  border: 2px solid var(--color-accent-1);
+  border-radius: var(--radius-s);
+  overflow: hidden;
+}
+
+.dataview.table-view-thead {
+  background: var(--background-secondary-alt);
+  color: var(--text-accent);
+  border-bottom: 2px solid var(--color-border-strong);
+}
+
+.dataview.table-view-table td,
+.dataview.table-view-table th {
+  border-bottom: 1px solid var(--background-modifier-border);
+  padding: .55em .7em;
+}

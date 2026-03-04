@@ -14,4 +14,4 @@ A neon-green, cyberpunk Matrix-inspired theme for Obsidian with Live Preview par
 
 ## Development
 
-The theme is modularized in `components/`. Run `npm run build` to compile into `dist/theme.css` (Obsidian does not support CSS `@import`).
+The theme is modularized in `components/`. Run `npm run build` to compile with Sass into `dist/theme.css` (Obsidian does not support CSS `@import`).
