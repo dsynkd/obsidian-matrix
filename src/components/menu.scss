@@ -1,0 +1,9 @@
+.is-phone .menu-group .menu-item:not(.is-label):after {
+    border-bottom: 1px dashed var(--color-border);
+    background: none;
+}
+
+/*
+.is-phone .menu-group  {
+    border: 1px solid var(--color-border);
+}*/

@@ -89,10 +89,12 @@ settings:
 @import 'components/ribbon';
 @import 'components/nav-header';
 @import 'components/titlebar';
+@import 'components/menu';
 
 /* Modals & Forms */
 @import 'components/modals';
 @import 'components/forms';
+@import 'components/settings';
 
 /* Editor & Content */
 @import 'components/editor';
