@@ -1,8 +1,12 @@
 /* Matrix Theme - Headers (H1, H2, H3, Inline Title) */
 
+body.uppercase-headings .markdown-rendered h1,
+body.uppercase-headings .inline-title {
+  text-transform: uppercase;
+}
+
 .markdown-rendered h1,
 .inline-title {
-  text-transform: uppercase;
   letter-spacing: 0.08em;
   font-weight: 800;
   color: var(--text-accent);
@@ -39,8 +43,11 @@ body.header-underlines .markdown-source-view.is-live-preview.mod-cm6 .cm-line:ha
   padding-bottom: 0;
 }
 
-.markdown-source-view.mod-cm6 .cm-header-1 {
+body.uppercase-headings .markdown-source-view.mod-cm6 .cm-header-1 {
   text-transform: uppercase;
+}
+
+.markdown-source-view.mod-cm6 .cm-header-1 {
   letter-spacing: 0.08em;
   font-weight: 800;
   color: var(--text-accent);

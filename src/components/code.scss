@@ -41,32 +41,6 @@ pre::before {
   font-style: italic;
 }
 
-.cm-s-obsidian .cm-atom,
-.cm-s-obsidian .cm-number {
-  color: #00ffaa;
-}
-
-.cm-s-obsidian .cm-keyword {
-  color: #66ffc2;
-}
-
-.cm-s-obsidian .cm-def,
-.cm-s-obsidian .cm-variableName {
-  color: #00ff41;
-}
-
-.cm-s-obsidian .cm-propertyName {
-  color: #57ffaf;
-}
-
-.cm-s-obsidian .cm-string {
-  color: #b6ffcf;
-}
-
-.cm-s-obsidian .cm-operator {
-  color: #72ff90;
-}
-
 .cm-s-obsidian .cm-link {
   color: var(--text-accent);
   text-decoration: underline;
