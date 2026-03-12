@@ -70,7 +70,8 @@ body.compact-add-property-button {
     position: absolute;
   }
 
-  & .markdown-source-view div.metadata-add-button {
+  & .markdown-source-view div.metadata-add-button,
+  & .markdown-reading-view div.metadata-add-button {
     right: 6px;
     top: 0;
   }
